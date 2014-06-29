@@ -1,0 +1,33 @@
+<h1>New LAN</h1>
+
+<%= form_for :lan, url: lans_path do |f| %>
+    <p>
+        <%= f.label :name %> <br>
+        <%= f.text_field :name %>
+    </p>
+    <p>
+        <%= f.label :max_players %>
+        <br>
+        <%= f.number_field :max_players %>
+    </p>
+    <p>
+        <%= f.label :description %> <br>
+        <%= f.text_area :description %>
+    </p>
+    <p>
+        <%= f.label :start_date %> <br>
+        <%= f.text_field :start_date, :id => "datetimepicker" %>
+    </p>
+    <p>
+        <%= f.label :end_date %> <br>
+        <%= f.text_field :end_date, :id => "datetimepicker2" %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
+
+<script type="text/javascript">
+    jQuery('#datetimepicker').datetimepicker({mask:'9999/19/39 29:59',}); 
+    jQuery('#datetimepicker2').datetimepicker({mask:'9999/19/39 29:59',}); 
+</script>

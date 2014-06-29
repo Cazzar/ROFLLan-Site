@@ -1,0 +1,17 @@
+default: &default
+  adapter: mysql
+  pool: 5
+  password: yea_no_password_for_you
+  timeout: 5000
+
+development:
+  <<: *default
+  database: lans_development
+
+test:
+  <<: *default
+  database: lans_test
+
+production:
+  <<: *default
+  database: lans_production

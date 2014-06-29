@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1804191951">
+    <data-source source="LOCAL" name="Rails ROFLLan: development" uuid="02040b14-8293-4963-b19c-10d3e4234bbd">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/lans_development</jdbc-url>
+      <user-password>dfe0dfc8df98dfd0dfdbdf93dff0dfe9dfeddff0dfe7dfc2</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails ROFLLan: test" uuid="73ea3110-f101-47e0-8fa2-78e85dc6786a">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/lans_test</jdbc-url>
+      <user-password>dfe0dfc8df98dfd0dfdbdf93dff0dfe9dfeddff0dfe7dfc2</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails ROFLLan: production" uuid="b8d39547-400f-47da-83f7-d380ad5d3183">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/lans_production</jdbc-url>
+      <user-password>dfe0dfc8df98dfd0dfdbdf93dff0dfe9dfeddff0dfe7dfc2</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

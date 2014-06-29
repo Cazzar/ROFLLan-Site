@@ -1,0 +1,8 @@
+<p>
+	Name: <%= @lan.name %><br>
+	Max Players: <%= @lan.max_players %> <br>
+	Description: <%= @lan.description %> <br>
+	Start time: <%= @lan.start_date %> <br>
+	End Date: <%= @lan.end_date %> <br>
+	<%= link_to "Edit", edit_lan_path(@lan.id) %> &nbsp; <%= link_to "Index", lans_path %>
+</p>
