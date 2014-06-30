@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [:login, :email, :username]
   attr_accessor :login
 
-  def login = (login)
+  def login=(login)
     @login = login
   end
 
