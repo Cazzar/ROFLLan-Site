@@ -31,6 +31,9 @@ gem 'modernizr-rails', '~> 2.7.1'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Use devise for the login system
+gem 'devise'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

@@ -3,16 +3,12 @@ Rails.application.routes.draw do
   get 'index/about'
   get 'index/contact'
   get 'index/sponsors'
-
-  get 'sessions/login'
-  get 'sessions/home'
-  get 'sessions/profile'
-  get 'sessions/setting'
-  post 'sessions/login' => 'sessions#login_attempt'
-
-  get 'users/new'
-  post 'users/create'
   
+  devise_for :users
+  scope "/admin" do
+  	resources :users
+  end
+
   resources :lans
 
   root 'index#index'

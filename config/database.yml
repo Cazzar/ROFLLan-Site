@@ -1,7 +1,8 @@
 default: &default
   adapter: mysql
   pool: 5
-  password: yea_no_password_for_you
+  username: global
+  password:
   timeout: 5000
 
 development:
