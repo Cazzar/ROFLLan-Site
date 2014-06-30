@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :lans
+  resources :posts
 
   root 'index#index'
 end

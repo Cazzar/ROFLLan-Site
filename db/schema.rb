@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140630051912) do
+ActiveRecord::Schema.define(version: 20140630140236) do
 
   create_table "lans", force: true do |t|
     t.string   "name"
-    t.string   "max_players"
+    t.integer  "max_players"
     t.text     "description"
     t.string   "start_date"
     t.string   "end_date"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 20140630051912) do
   end
 
   add_index "lans", ["id"], name: "index_lans_on_id", unique: true, using: :btree
+
+  create_table "posts", force: true do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false

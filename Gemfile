@@ -36,6 +36,11 @@ gem 'devise'
 
 gem 'github-markdown'
 
+#Because HTML truncation
+gem 'nokogiri'
+gem 'htmlentities'
+gem 'truncate_html'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

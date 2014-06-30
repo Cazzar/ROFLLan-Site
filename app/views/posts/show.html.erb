@@ -1,0 +1,6 @@
+  <h1><%= @post.title %></h1>
+  <h5>By <%= @post.user.username %></h5>
+  <%= raw(GitHub::Markdown.render_gfm(@post.data)) %>
+  
+  <%= link_to "Edit", edit_post_path(@post.id) if current_user != nil && current_user.admin? %> 
+  <%= link_to "Index", posts_path %>

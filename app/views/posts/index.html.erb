@@ -1,11 +1,11 @@
+<h1><%= @pagetitle %></h1>
+
 <% @posts.each do |post| %>
   <div name="posts">
     <b><%= link_to "#{post.title} - By #{post.user.username}", post %></b>
-    <%= raw(truncate_html GitHub::Markdown.render_gfm(post.data), :length => 200) %>
+    <%= raw(GitHub::Markdown.render_gfm(post.data.truncate(200))) %>
   </div>
 <% end %>
 
-
-test
 
 <%= will_paginate @posts %>

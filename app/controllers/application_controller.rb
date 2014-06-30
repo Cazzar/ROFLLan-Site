@@ -14,4 +14,9 @@ class ApplicationController < ActionController::Base
   def check_admin!
   	redirect_to "/", notice: "You do not have enough permissions to be here" unless current_user.admin? 
   end
+
+  def is_admin?
+    return false if current_user == nil
+    return current_user.admin?
+  end
 end
