@@ -28,6 +28,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bb-ruby (1.0.4)
     bcrypt (3.1.7)
     bcrypt (3.1.7-x64-mingw32)
     builder (3.2.2)
@@ -127,6 +128,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bb-ruby
   bcrypt (~> 3.1.7)
   coffee-rails (~> 4.0.0)
   devise
