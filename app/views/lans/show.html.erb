@@ -1,8 +1,6 @@
-<p>
 	Name: <%= @lan.name %><br>
 	Max Players: <%= @lan.max_players %> <br>
-	Description: <%= raw(@lan.description.bbcode_to_html) %> <br>
+	Description: <%= raw(GitHub::Markdown.render_gfm(@lan.description)) %>
 	Start time: <%= @lan.start_date %> <br>
 	End Date: <%= @lan.end_date %> <br>
 	<%= link_to "Edit", edit_lan_path(@lan.id) %> &nbsp; <%= link_to "Index", lans_path %>
-</p>
