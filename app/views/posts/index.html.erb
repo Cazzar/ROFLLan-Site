@@ -3,7 +3,7 @@
 <% @posts.each do |post| %>
   <div name="posts">
     <b><%= link_to "#{post.title} - By #{post.user.username}", post %></b>
-    <%= raw(GitHub::Markdown.render_gfm(post.data.truncate(200))) %>
+    <%= raw(truncate_html GitHub::Markdown.render_gfm(post.data), :length => 200) %>
   </div>
 <% end %>
 
