@@ -3,11 +3,11 @@
 one:
   id: 
   name: MyString
-  max_players: MyString
+  max_players: 123
   description: MyText
 
 two:
   id: 
   name: MyString
-  max_players: MyString
+  max_players: 456
   description: MyText

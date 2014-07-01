@@ -3,7 +3,7 @@
 <% @lans.each do |lan| %>
 	<div name="event">
 		<b><%= link_to lan.name, lan %></b>
-		<%= raw( truncate_html lan.description.truncate(50), :length => 200) %>
+		<%= raw( truncate_html GitHub::Markdown.render_gfm(lan.description), :length => 100) %>
 	</div>
 <% end %>
 

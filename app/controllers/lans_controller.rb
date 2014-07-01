@@ -41,6 +41,27 @@ class LansController < ApplicationController
     end
   end
 
+  def signup
+    @lan = Lan.find(params[:id])
+  end
+
+  def signup_complete
+    @lan = Lan.find(params[:id])
+    @signup =  Signup.new
+
+    @signup.user = current_user
+    @signup.lan = @lan
+    
+    @signup.save
+
+    redirect_to lan_signups_path(@lan.id)
+  end
+
+  def signups
+    @lan = Lan.find(params[:id])
+    @signups = Signup.where(lan: @lan).paginate(:page => params[:page], :per_page => 100)
+  end
+
   private
   	def lan_params
   		params.require(:lan).permit(:name, :max_players, :description, :start_date, :end_date)
