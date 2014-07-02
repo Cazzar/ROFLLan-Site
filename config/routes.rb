@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get 'index/index'
-  get 'index/about'
-  get 'index/contact'
-  get 'index/sponsors'
+  get 'about' => 'index#about'
+  get 'contact' => 'index#contact'
+  get 'sponsors' => 'index#sponsors'
   
   devise_for :users
   scope '/admin' do

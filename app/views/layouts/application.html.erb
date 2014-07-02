@@ -2,8 +2,10 @@
 <html>
 <head>
   <link href='http://fonts.googleapis.com/css?family=Ubuntu|Play|Oxygen' rel='stylesheet' type='text/css'>
-  <title>ROFL Lan <%= " - #{@pagetitle}" if defined? @pagetitle %> </title>
+  <title><%= t('title') %><%= " | #{@pagetitle}" if defined? @pagetitle %> </title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    params[:controller], media: 'all', 'data-turbolinks-track' => true %>
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
@@ -11,13 +13,17 @@
 <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  <header>ROFL Lan</header>
+  <header><%= t('title') %></header>
   <nav>
-  	News | Events | About | Contact | Patrons
+    <%= link_to t('news'), root_path, id: "active-#{current_page?(controller: :index, action: :index)}" %> | 
+    <%= link_to t('events'), lans_path, id: "active-#{params[:controller] == 'lans'}" %> |
+    <%= link_to t('about'), about_path, id: "active-#{current_page?(controller: :index, action: :about)}" %> |
+    <%= link_to t('contact'), contact_path, id: "active-#{current_page?(controller: :index, action: :contact)}" %> | 
+    <%= link_to t('sponsors'), sponsors_path, id: "active-#{current_page?(controller: :index, action: :sponsors)}" %>
   </nav>
    <div id='wrapper'>
-	   <%= yield %>
+     <%= yield %>
    </div>
-	<footer> feet feet</footer>
+  <footer> feet feet</footer>
 </body>
 </html>
