@@ -3,5 +3,6 @@
 	Description: <%= raw(GitHub::Markdown.render_gfm(@lan.description)) %>
 	Start time: <%= @lan.start_date %> <br>
 	End Date: <%= @lan.end_date %> <br>
-	<%= link_to "Edit", edit_lan_path(@lan.id) if current_user != nil && current_user.admin? %> 
+	<%= link_to "Edit", edit_lan_path(@lan.id) if !current_user.nil? && current_user.admin? %> 
   <%= link_to "Index", lans_path %>
+  <%= link_to "Signup", lan_signup_path(@lan.id) if !@signed_up %>

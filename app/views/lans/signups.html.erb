@@ -1,0 +1,9 @@
+<div class="signups">
+  <ul>
+  <% @signups.each do |u| %>
+    <li> <%= u.user.username %> <%= link_to "Remove Signup", lan_remove_signup_path(u.lan.id) unless current_user.nil? || current_user != u.user %>
+  <% end %>
+  </ul>
+
+  <%= will_paginate @signups %>
+</div>

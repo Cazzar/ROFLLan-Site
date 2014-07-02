@@ -1,0 +1,8 @@
+<% if (@error.defined?) %>
+  <p> <%= @error %> </p>
+<% end %>
+
+<%= form_for :signup, url: lan_signup_path(@lan.id), method: :post do |f| %>
+  <%= f.check_box "confirm" %> Confirm <br>
+  <%= f.submit %>
+<% end %>

@@ -1,6 +1,6 @@
 class LansController < ApplicationController
   #Make it so I do not need to use Lan.find(params[:id]) more than nessacary
-  before_filter :get_lan, except: [:create, :new]
+  before_filter :get_lan, except: [:create, :new, :index]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :authenticate_user!, except: [:index, :show]
 
@@ -19,6 +19,7 @@ class LansController < ApplicationController
   end
 
   def show
+    @signed_up = is_signed_up?
     @pagetitle = @lan.name
   end
 

@@ -1,0 +1,4 @@
+<%= form_for :signup, url: lan_remove_signup_complete_path(@lan.id), method: :delete do |f| %>
+  <%= f.check_box "confirm" %> Confirm <br>
+  <%= f.submit %>
+<% end %>
