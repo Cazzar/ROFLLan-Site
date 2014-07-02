@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu|Play|Oxygen' rel='stylesheet' type='text/css'>
   <title>ROFL Lan <%= " - #{@pagetitle}" if defined? @pagetitle %> </title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  
-<%= yield %>
-
+  <header>ROFL Lan</header>
+  <nav>
+  	News | Events | About | Contact | Patrons
+  </nav>
+   <div id='wrapper'>
+	   <%= yield %>
+   </div>
+	<footer> feet feet</footer>
 </body>
 </html>
